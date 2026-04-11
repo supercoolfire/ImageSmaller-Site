@@ -1,0 +1,66 @@
+:root {
+    --primary-color: #6750A4;
+    --secondary-color: #EADDFF;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    background-color: var(--primary-color) !important;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #4F378B 100%);
+    color: white;
+    padding: 80px 0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.feature-card {
+    border: none;
+    border-radius: 20px;
+    transition: transform 0.3s;
+    height: 100%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.screenshot-img {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    max-width: 280px;
+    margin: 20px auto;
+    display: block;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #4F378B;
+}
+
+.download-section {
+    background-color: var(--secondary-color);
+    padding: 60px 0;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+.footer {
+    padding: 40px 0;
+    color: #666;
+}
