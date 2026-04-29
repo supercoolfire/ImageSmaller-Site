@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version History - ImageSmaller</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <style>
+        .commit-card {
+            border-left: 4px solid var(--primary-color);
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .commit-card:hover {
+            transform: translateX(5px);
+        }
+        .commit-hash {
+            font-family: monospace;
+            color: #666;
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+        .commit-date {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .version-badge {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="assets/img/favicon.png" alt="Logo" width="30" height="30" class="me-2 rounded" style="object-fit: cover;">
+            ImageSmaller
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html#story">Our Story</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#screenshots">Screenshots</a></li>
+                <li class="nav-item"><a class="nav-link active" href="version-history.html">Version History</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#download">Download</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3">Version History</h1>
+        <p class="lead">Tracking the evolution of Machine Empire's image optimization engine.</p>
+    </div>
+</header>
+
+<main class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            
+            <!-- v1.1 or Current Development -->
+            <div class="mb-5">
+                <h3 class="fw-bold mb-4 d-flex align-items-center">
+                    <span class="version-badge me-3">v1.1</span>
+                    Forensic Standard Update
+                </h3>
+                
+                <div class="commit-card">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="commit-date">2026-04-29</span>
+                        <span class="commit-hash">44e5f02</span>
+                    </div>
+                    <h5 class="fw-bold mb-2">feat: implement forensic-grade EXIF metadata and GPS retention</h5>
+                    <ul class="text-muted small">
+                        <li>Integrated comprehensive EXIF attribute mirroring (GPS, Camera Settings, Lens Info).</li>
+                        <li>Added fresh 256px thumbnail generation to sync gallery previews.</li>
+                        <li>Implemented FileDescriptor handling for Scoped Storage compatibility (API 29+).</li>
+                        <li>Added unredacted GPS access via MediaStore.setRequireOriginal.</li>
+                        <li>Overwrote default 'Software' tags to maintain 'fresh from camera' signature.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- v1.0 Release -->
+            <div class="mb-5">
+                <h3 class="fw-bold mb-4 d-flex align-items-center">
+                    <span class="version-badge me-3">v1.0</span>
+                    Initial Release
+                </h3>
+
+                <div class="commit-card">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="commit-date">2026-04-11</span>
+                        <span class="commit-hash">9972339</span>
+                    </div>
+                    <h5 class="fw-bold mb-2">refactor: move configuration settings to a separate activity</h5>
+                    <p class="text-muted small mb-0">Optimized the UI flow by separating processing from configuration.</p>
+                </div>
+
+                <div class="commit-card">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="commit-date">2026-04-11</span>
+                        <span class="commit-hash">16bc327</span>
+                    </div>
+                    <h5 class="fw-bold mb-2">first commit</h5>
+                    <p class="text-muted small mb-0">Initial project structure, batch processing engine, and smart trimming logic.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer class="footer text-center">
+    <div class="container">
+        <hr>
+        <p>&copy; 2026 Machine Empire. Built from the ground up.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

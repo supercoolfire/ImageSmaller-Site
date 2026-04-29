@@ -28,10 +28,13 @@ Even though it started as a tool for online sellers, it works great for anyone! 
 
 ## ✨ Key Features
 
+- **Forensic-Grade Metadata**: Retain GPS coordinates, Camera Settings, and Lens info for an "untouched" look.
+- **Smart Thumbnail Sync**: Auto-generates 256px thumbnails to keep gallery previews crisp and synchronized.
+- **Camera Signature Stealth**: Overwrites software tags to maintain the original "fresh from camera" signature.
 - **Smart Trimming**: Automatically cut out unwanted borders.
 - **Batch Processing**: Fix or shrink hundreds of photos at once.
-- **Privacy**: Option to remove location data hidden inside your photos.
-- **Modern Formats**: Use space-saving formats like WebP to get even smaller files.
+- **Privacy-First GPS**: Option to remove location data or access unredacted coordinates via MediaStore (API 29+).
+- **Modern Formats**: Use space-saving formats like WebP or PNG for maximum efficiency.
 - **Easy to Use**: A simple, clean interface that anyone can understand.
 
 ---
