@@ -9,30 +9,22 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <style>
-        .commit-card {
+        .version-card {
             border-left: 4px solid var(--primary-color);
             background: white;
             border-radius: 10px;
-            margin-bottom: 20px;
-            padding: 20px;
+            margin-bottom: 30px;
+            padding: 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             transition: transform 0.2s;
         }
-        .commit-card:hover {
+        .version-card:hover {
             transform: translateX(5px);
         }
-        .commit-hash {
-            font-family: monospace;
+        .version-date {
             color: #666;
-            background: #eee;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-        }
-        .commit-date {
-            color: var(--primary-color);
-            font-weight: 600;
             font-size: 0.9rem;
+            font-weight: 500;
         }
         .version-badge {
             background-color: var(--secondary-color);
@@ -79,52 +71,56 @@
     <div class="row justify-content-center">
         <div class="col-lg-8">
             
-            <!-- v1.1 or Current Development -->
-            <div class="mb-5">
-                <h3 class="fw-bold mb-4 d-flex align-items-center">
-                    <span class="version-badge me-3">v1.1</span>
-                    Forensic Standard Update
-                </h3>
+            <!-- v1.2 Release -->
+            <div class="version-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3 class="fw-bold mb-0 d-flex align-items-center">
+                        <span class="version-badge me-3">v1.2</span>
+                        Dynamic Quality & Feedback Update
+                    </h3>
+                    <span class="version-date">2026-05-02</span>
+                </div>
                 
-                <div class="commit-card">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <span class="commit-date">2026-04-29</span>
-                        <span class="commit-hash">44e5f02</span>
-                    </div>
-                    <h5 class="fw-bold mb-2">feat: implement forensic-grade EXIF metadata and GPS retention</h5>
-                    <ul class="text-muted small">
-                        <li>Integrated comprehensive EXIF attribute mirroring (GPS, Camera Settings, Lens Info).</li>
-                        <li>Added fresh 256px thumbnail generation to sync gallery previews.</li>
-                        <li>Implemented FileDescriptor handling for Scoped Storage compatibility (API 29+).</li>
-                        <li>Added unredacted GPS access via MediaStore.setRequireOriginal.</li>
-                        <li>Overwrote default 'Software' tags to maintain 'fresh from camera' signature.</li>
-                    </ul>
+                <h5 class="fw-bold mb-3 text-primary">New Features</h5>
+                <ul class="text-muted">
+                    <li><strong>Dynamic Quality Scaling:</strong> Iterative binary search to hit target file sizes while maximizing quality.</li>
+                    <li><strong>High-Resolution Progress:</strong> Granular tracking (total images × 100) for precise feedback.</li>
+                    <li><strong>Sub-task Status:</strong> Real-time updates like "Optimizing Quality: Pass X/Y".</li>
+                    <li><strong>Forensic EXIF Retention:</strong> Mirroring of GPS, Camera settings, and Lens info.</li>
+                    <li><strong>Thumbnail Synchronization:</strong> Auto-generation of 256px thumbnails for gallery consistency.</li>
+                    <li><strong>Camera Signature Integrity:</strong> Custom software tags to maintain "fresh from camera" status.</li>
+                    <li><strong>Scoped Storage:</strong> Full compatibility with Android API 29+ using FileDescriptors.</li>
+                    <li><strong>Phase Logic:</strong> Clear visual distinction between Loading, Search, and Finalization phases.</li>
+                </ul>
+                <div class="mt-4">
+                    <a href="releases/ImageSmaller-v1.2.apk" class="btn btn-primary px-4">
+                        <i class="bi bi-download me-2"></i>Download v1.2 APK
+                    </a>
                 </div>
             </div>
 
             <!-- v1.0 Release -->
-            <div class="mb-5">
-                <h3 class="fw-bold mb-4 d-flex align-items-center">
-                    <span class="version-badge me-3">v1.0</span>
-                    Initial Release
-                </h3>
-
-                <div class="commit-card">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <span class="commit-date">2026-04-11</span>
-                        <span class="commit-hash">9972339</span>
-                    </div>
-                    <h5 class="fw-bold mb-2">refactor: move configuration settings to a separate activity</h5>
-                    <p class="text-muted small mb-0">Optimized the UI flow by separating processing from configuration.</p>
+            <div class="version-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3 class="fw-bold mb-0 d-flex align-items-center">
+                        <span class="version-badge me-3">v1.0</span>
+                        Initial Release
+                    </h3>
+                    <span class="version-date">2026-04-11</span>
                 </div>
 
-                <div class="commit-card">
-                    <div class="d-flex justify-content-between align-items-start mb-2">
-                        <span class="commit-date">2026-04-11</span>
-                        <span class="commit-hash">16bc327</span>
-                    </div>
-                    <h5 class="fw-bold mb-2">first commit</h5>
-                    <p class="text-muted small mb-0">Initial project structure, batch processing engine, and smart trimming logic.</p>
+                <h5 class="fw-bold mb-3 text-primary">New Features</h5>
+                <ul class="text-muted">
+                    <li><strong>Smart Trimming:</strong> Automatic solid border removal with adjustable gray-level thresholds.</li>
+                    <li><strong>Batch Processing:</strong> Efficient engine for resizing and compressing multiple images at once.</li>
+                    <li><strong>Multi-Format Support:</strong> Export capabilities for JPG, PNG, and WebP (Lossy/Lossless).</li>
+                    <li><strong>UI Flow:</strong> Specialized configuration activity for advanced optimization settings.</li>
+                    <li><strong>Auto-Square Crop:</strong> Instant 450x450 square conversion for e-commerce workflows.</li>
+                </ul>
+                <div class="mt-4">
+                    <a href="releases/ImageSmaller-v1.0.apk" class="btn btn-outline-primary px-4">
+                        <i class="bi bi-download me-2"></i>Download v1.0 APK
+                    </a>
                 </div>
             </div>
 
